@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    min-height: 100vh; /* Ensures the body takes full height */
+    padding-bottom: 0; /* Removed extra padding */
+}
+
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007BFF;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav .btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #007BFF;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #007BFF;
+            transition: all 0.3s ease;
+        }
+
+        nav .btn:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+
+        main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Project Styles */
+.project {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.project:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.project h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.project ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.project ul li {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+}   
+  /* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Change from absolute to relative */
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Ensures footer sticks to the bottom */
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: #007BFF;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="betaportfolio.html">B</a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="projectdetails.html">Project details</a>
+            <a href="skills.html">Skills</a>
+            <a href="recommendations.html">Recommendations</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="projects">
+            <!-- Project 1: E-Commerce Website -->
+            <div class="project">
+                <h2>E-Commerce Website</h2>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js, Express, MongoDB, React</p>
+                <p><strong>Description:</strong> A fully functional e-commerce website where users can browse products, add items to their cart, and proceed to checkout. Admins can add, edit, and delete products from the inventory.</p>
+                <ul>
+                    <li>User authentication with login and registration.</li>
+                    <li>Shopping cart functionality with item quantity adjustment.</li>
+                    <li>Admin dashboard for managing products.</li>
+                    <li>Payment gateway integration (e.g., PayPal or Stripe).</li>
+                    <li>User reviews and ratings for products.</li>
+                </ul>
+            </div>
+
+            <!-- Project 2: Task Management Web App -->
+            <div class="project">
+                <h2>Task Management Web App</h2>
+                <p><strong>Technologies:</strong> React, Redux, Node.js, Express, MongoDB</p>
+                <p><strong>Description:</strong> A task management application where users can create, update, and delete tasks, and track their progress. The app supports categories for tasks and prioritization.</p>
+                <ul>
+                    <li>User authentication (signup/login).</li>
+                    <li>Create, edit, delete, and mark tasks as completed.</li>
+                    <li>Categorize tasks (Work, Personal, etc.) and set priorities.</li>
+                    <li>Visual task progress (using a progress bar).</li>
+                    <li>Filtering tasks by category or priority.</li>
+                </ul>
+            </div>
+
+            <!-- Project 3: Blog Platform -->
+            <div class="project">
+                <h2>Blog Platform</h2>
+                <p><strong>Technologies:</strong> WordPress, React, Node.js, MongoDB</p>
+                <p><strong>Description:</strong> A blog platform that allows users to create, read, and comment on blog posts. It features a responsive design, an admin panel to manage posts, and a search function.</p>
+                <ul>
+                    <li>User authentication (user can comment and create posts).</li>
+                    <li>Admin panel for managing posts.</li>
+                    <li>Search functionality for blog posts.</li>
+                    <li>Responsive design for mobile and desktop devices.</li>
+                    <li>Comment section with replies.</li>
+                </ul>
+            </div>
+
+            <!-- Project 4: Real-Time Chat Application -->
+            <div class="project">
+                <h2>Real-Time Chat Application</h2>
+                <p><strong>Technologies:</strong> Socket.io, Node.js, Express, MongoDB, React</p>
+                <p><strong>Description:</strong> A real-time chat application where users can create rooms, send messages, and share media files. The app supports private messaging and notifications.</p>
+                <ul>
+                    <li>Real-time messaging using WebSockets (Socket.io).</li>
+                    <li>Create and join chat rooms.</li>
+                    <li>Send and receive media files (images, videos).</li>
+                    <li>Notifications for new messages.</li>
+                    <li>User authentication.</li>
+                </ul>
+            </div>
+
+            <!-- Project 5: Recipe Finder App -->
+            <div class="project">
+                <h2>Recipe Finder App</h2>
+                <p><strong>Technologies:</strong> React, API (e.g., Edamam, Spoonacular), Node.js</p>
+                <p><strong>Description:</strong> An app that allows users to search for recipes based on ingredients they have. Users can save recipes to their favorites and view nutritional information.</p>
+                <ul>
+                    <li>Search for recipes based on ingredients.</li>
+                    <li>Save recipes to a personal favorites list.</li>
+                    <li>Display nutritional information for each recipe.</li>
+                    <li>Responsive layout and interactive UI.</li>
+                    <li>Pagination for search results.</li>
+                </ul>
+            </div>
+
+            <!-- Project 6: Weather Dashboard -->
+            <div class="project">
+                <h2>Weather Dashboard</h2>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, React, OpenWeatherMap API</p>
+                <p><strong>Description:</strong> A weather application that fetches data from the OpenWeatherMap API and displays the weather for a user's current location or a searched city.</p>
+                <ul>
+                    <li>Display current weather information (temperature, humidity, wind speed, etc.).</li>
+                    <li>Search for weather by city name.</li>
+                    <li>Show a 5-day forecast.</li>
+                    <li>Display weather icons for different conditions (sunny, rainy, cloudy).</li>
+                    <li>Use geolocation to automatically display the weather for the user’s current location.</li>
+                </ul>
+            </div>
+
+            <!-- Project 7: Expense Tracker -->
+            <div class="project">
+                <h2>Expense Tracker</h2>
+                <p><strong>Technologies:</strong> React, Node.js, Express, MongoDB</p>
+                <p><strong>Description:</strong> A personal finance app that tracks user expenses, categorizes spending, and provides reports on overall spending trends.</p>
+                <ul>
+                    <li>User authentication (login, register).</li>
+                    <li>Add, edit, and delete expenses.</li>
+                    <li>Categorize expenses (food, transport, entertainment, etc.).</li>
+                    <li>Visual charts and reports to analyze spending.</li>
+                    <li>Search and filter expenses by date or category.</li>
+                </ul>
+            </div>
+
+            <!-- Project 8: Fitness Tracker App -->
+            <div class="project">
+                <h2>Fitness Tracker App</h2>
+                <p><strong>Technologies:</strong> React Native, Firebase</p>
+                <p><strong>Description:</strong> A mobile app to track workouts, set fitness goals, and monitor progress. It includes features like workout history, goal tracking, and integration with Google Fit or Apple Health.</p>
+                <ul>
+                    <li>Create and log workout routines (e.g., running, cycling, strength training).</li>
+                    <li>Set fitness goals (e.g., number of workouts per week, weight loss).</li>
+                    <li>Track progress over time (calories burned, time spent working out).</li>
+                    <li>Integration with Google Fit/Apple Health.</li>
+                    <li>Visual progress reports.</li>
+                </ul>
+            </div>
+
+            <!-- Project 9: Job Board -->
+            <div class="project">
+                <h2>Job Board</h2>
+                <p><strong>Technologies:</strong> React, Node.js, Express, MongoDB</p>
+                <p><strong>Description:</strong> A job board where companies can post job openings, and users can search for and apply to jobs. It includes user authentication for applicants and job posting for employers.</p>
+                <ul>
+                    <li>Job posting feature for employers (including job description, salary, and company info).</li>
+                    <li>User authentication for applicants to apply for jobs.</li>
+                    <li>Job search functionality with filters (by location, salary, job type).</li>
+                    <li>Resume upload for job applications.</li>
+                    <li>Admin panel for managing posted jobs.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Ryan Gray. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

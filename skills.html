@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    min-height: 100vh; /* Ensures the body takes full height */
+    padding-bottom: 0; /* Remove padding to ensure footer sticks to bottom */
+}
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            
+
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007BFF;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav .btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #007BFF;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #007BFF;
+            transition: all 0.3s ease;
+        }
+
+        nav .btn:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+
+/* Main Content Styling */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    gap: 2rem;
+    flex-grow: 1; /* Allow the content area to expand and fill available space */
+}
+
+.skills div {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.skills div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.skills img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #007BFF;
+}
+
+.skills h3 {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.skills p {
+    padding: 1.5rem;
+    font-size: 1rem;
+    color: #555;
+    text-align: justify;
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: auto; /* Push the footer to the bottom */
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+footer a {
+    color: #007BFF;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    nav a {
+        margin: 1rem 0;
+    }
+
+    .skills {
+        padding: 2rem 1.5rem;
+    }
+
+    .skills div {
+        flex: 1 1 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="betaportfolio.html">B</a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="projectdetails.html">Project Details</a>
+            <a href="skills.html">Skills</a>
+            <a href="recommendations.html">Recommendations</a>
+        </nav>
+    </header>
+
+    <div class="skills">
+        <div>
+            <img src="images/fstack.jpg" alt="Full Stack Web Development">
+            <h3>Full Stack Web Development</h3>
+            <p>I specialize in both frontend and backend web development. I have experience building responsive and dynamic user interfaces using HTML, CSS, and JavaScript, along with modern frameworks like React, Angular, and Vue.js. On the backend, I use technologies like Node.js, Express, Django, and Flask to create robust and scalable web applications.</p>
+        </div>
+        <div>
+            <img src="images/versioncontrol.jpg" alt="Version Control">
+            <h3>Version Control</h3>
+            <p>I am highly skilled in using Git for version control, ensuring that code is tracked, maintained, and collaborated on efficiently. I regularly use GitHub, GitLab, and Bitbucket to manage repositories, contribute to collaborative projects, and maintain an organized version history.</p>
+        </div>
+        <div>
+            <img src="images/devops.jpg" alt="DevOps">
+            <h3>DevOps</h3>
+            <p>With a strong focus on automation and continuous delivery, I am skilled in implementing CI/CD pipelines using tools like Jenkins and Travis CI. I also have experience with container orchestration using Docker and Kubernetes, which helps me ensure that applications are efficiently built, tested, and deployed.</p>
+        </div>
+        <div>
+            <img src="images/ml.jpg" alt="Machine Learning">
+            <h3>Machine Learning</h3>
+            <p>I have experience applying machine learning techniques using frameworks like TensorFlow, PyTorch, and scikit-learn. Whether it's building predictive models or creating data-driven applications, I leverage AI to solve complex problems and enhance user experiences.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ryan Gray. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
+    padding-bottom: 50px;
+    margin-bottom: 50px; /* Adds space for footer */
+}
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007BFF;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav .btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #007BFF;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #007BFF;
+            transition: all 0.3s ease;
+        }
+
+        nav .btn:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+
+        section {
+            padding: 40px 20px;
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Recommendation Form */
+        #recommendation-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        #recommendation-form label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        #recommendation-form input,
+        #recommendation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        #recommendation-form button {
+            padding: 12px 24px;
+            background-color: #007BFF;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #recommendation-form button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Recommendation Cards */
+        .recommendation-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .recommendation-card:hover {
+            transform: scale(1.02);
+        }
+
+        .project-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        .recommendation-text {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        /* General Recommendations */
+        .general-recommendations {
+            margin-top: 40px;
+            display: grid;
+            gap: 20px;
+        }
+
+        .general-recommendation {
+            background-color: #ecf0f1;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .general-recommendation h3 {
+            color: #34495e;
+            margin-top: 0;
+            font-size: 1.3em;
+        }
+
+        /* Footer Styling */
+        footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Keeps footer at the bottom of the viewport */
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+        footer p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer a {
+            color: #007BFF;
+        }
+
+        footer a:hover {
+            color: #0056b3;
+        }
+
+        /* Pop-up Message */
+        .popup-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="betaportfolio.html">B</a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="projectdetails.html">Project details</a>
+            <a href="skills.html">Skills</a>
+            <a href="recommendations.html">Recommendations</a>
+        </nav>
+    </header>
+
+    <section>
+        <!-- Recommendation Form -->
+        <form id="recommendation-form">
+            <label for="project-name">Project Name:</label>
+            <input type="text" id="project-name" name="project-name" required><br><br>
+            <label for="recommendation-text">Recommendation Text:</label><br>
+            <textarea id="recommendation-text" name="recommendation-text" rows="4" cols="50" required></textarea><br><br>
+            <button type="submit" class="btn">Submit Recommendation</button>
+        </form>
+
+        <!-- Existing Recommendations -->
+        <div id="recommendations-list">
+            <!-- Recommendations will be added here dynamically -->
+        </div>
+    </section>
+
+    <section class="general-recommendations">
+        <div class="general-recommendation">
+            <h3>Team Collaboration</h3>
+            "I've worked with Ryan on multiple projects, and they are always a valuable team member. Their communication skills, collaborative mindset, and ability to take initiative make them a pleasure to work with. They bring a positive attitude to every project."
+        </div>
+
+        <div class="general-recommendation">
+            <h3>Work Ethic & Reliability</h3>
+            "One of the things I appreciate most about Ryan is their dedication to delivering high-quality work on time. They consistently meet deadlines, follow best practices, and are always ready to go the extra mile to ensure the project is successful."
+        </div>
+
+        <div class="general-recommendation">
+            <h3>Problem-Solving Skills</h3>
+            "Ryan has an outstanding ability to solve complex problems. Whether it's debugging an issue or optimizing performance, they consistently come up with effective solutions. Their problem-solving approach is methodical and efficient."
+        </div>
+
+        <div class="general-recommendation">
+            <h3>Creative Vision</h3>
+            "Ryan has a fantastic eye for design and usability. They not only focus on functionality but also ensure that the user experience is top-notch. Their work on the UI/UX design of our app has received great feedback from users."
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ryan Gray. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Pop-up Message -->
+    <div class="popup-message" id="popup-message">
+        Recommendation submitted successfully!
+    </div>
+
+    <script>
+        // Handle recommendation form submission
+        document.getElementById('recommendation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Get form data
+            const projectName = document.getElementById('project-name').value;
+            const recommendationText = document.getElementById('recommendation-text').value;
+
+            // Create a new recommendation card
+            const recommendationCard = document.createElement('div');
+            recommendationCard.classList.add('recommendation-card');
+            recommendationCard.innerHTML = ` 
+                <div class="project-name">${projectName}</div>
+                <div class="recommendation-text">${recommendationText}</div>
+            `;
+
+            // Append the new card to the recommendations list
+            document.getElementById('recommendations-list').appendChild(recommendationCard);
+
+            // Show confirmation message
+            const popupMessage = document.getElementById('popup-message');
+            popupMessage.style.display = 'block';
+
+            // Hide the message after 3 seconds
+            setTimeout(function() {
+                popupMessage.style.display = 'none';
+            }, 3000);
+
+            // Reset the form
+            document.getElementById('recommendation-form').reset();
+        });
+    </script>
+</body>
+</html>

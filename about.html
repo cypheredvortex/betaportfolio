@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            background-image: linear-gradient(to bottom, #f0f4f8, #d9e2ec);
+            min-height: 100vh; /* Ensures the body takes full height */
+            padding-bottom: 50px; /* Keeps footer from being too close to content */
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #007BFF;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #007BFF;
+        }
+
+        .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a {
+            margin-left: 2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        nav .btn {
+            padding: 0.5rem 1rem;
+            border: 2px solid #007BFF;
+            border-radius: 25px;
+            font-weight: bold;
+            color: #007BFF;
+            transition: all 0.3s ease;
+        }
+
+        nav .btn:hover {
+            background-color: #007BFF;
+            color: #ffffff;
+        }
+
+       
+#about {
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+    justify-content: center; /* Centers the content horizontally */
+    flex-direction: row; /* Horizontal layout for image and text */
+    padding: 50px 20px; /* Padding for spacing */
+    background-color: #fff; /* Clean white background */
+    border-radius: 10px; /* Rounded corners for a smooth look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 5% auto; /* Centered in the page with spacing */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for about section */
+#about:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+/* Image Styling */
+#about img {
+    width: 150px; /* Fixed width for profile image */
+    height: 150px; /* Fixed height */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Crop the image to fit the circle */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow around the image */
+    margin-right: 30px; /* Space between the image and the text */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Image hover effect */
+#about img:hover {
+    transform: scale(1.1); /* Slight zoom-in effect on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Text Styling */
+#about h2 {
+    font-size: 2.5rem; /* Large title size */
+    font-weight: 700; /* Bold font weight */
+    color: #333; /* Dark text for contrast */
+    margin: 0 0 15px; /* Margin for spacing between title and paragraph */
+    letter-spacing: 1px; /* Slightly spaced letters for readability */
+}
+
+/* Paragraph Styling */
+#about p {
+    font-size: 1.2rem; /* Larger font size for readability */
+    color: #555; /* Lighter gray for the paragraph */
+    max-width: 800px; /* Restrict the width of the text block */
+    line-height: 1.8; /* Increased line height for better legibility */
+    text-align: justify; /* Justified text for a neat appearance */
+}
+
+/* Footer Styling */
+footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #ffffff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        footer a {
+            color: #007BFF;
+        }
+
+        footer a:hover {
+            color: #0056b3;
+        }
+
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5rem 0;
+    }
+    /* img {
+        width: 150px;
+        height: 150px;
+    } */
+    #about {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center-align text on small devices */
+    }
+
+    #about img {
+        margin-right: 0;
+        margin-bottom: 20px; /* Space between image and text */
+        width: 120px; /* Smaller image size on mobile */
+        height: 120px;
+    }
+
+    #about h2 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+
+    #about p {
+        font-size: 1rem; /* Adjust paragraph size */
+        max-width: 100%; /* Allow paragraph to span full width */
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="betaportfolio.html">B</a>
+        </div>
+        <nav>
+            <a href="about.html">About</a>
+            <a href="projectdetails.html">Project details</a>
+            <a href="skills.html">Skills</a>
+            <a href="recommendations.html">Recommendations</a>
+        </nav>
+    </header>
+    <div id="about">
+    <img src="images/profile.jpg" alt="Profile Picture">
+    <h2>Ryan Gray</h2>
+    <p>A passionate and innovative software engineer committed to building exceptional digital solutions. With a deep understanding of modern development practices and a keen eye for user-centered design, I specialize in creating scalable, efficient, and impactful applications. My expertise spans a diverse range of technologies, including web development, software architecture, and system optimization. Throughout my career, I've delivered high-quality products, from complex backend systems to seamless front-end experiences, always focusing on performance, security, and user satisfaction. I am driven by the challenge of solving problems and delivering innovative, functional solutions that empower users and drive business success. Thank you for exploring my work, and I invite you to delve deeper into my projects and technical skills below.</p>
+    </div>
+    <footer>
+        <p>&copy; 2025 Ryan Gray. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
